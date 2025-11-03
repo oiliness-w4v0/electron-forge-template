@@ -1,0 +1,40 @@
+{
+  "name": "electron-forge-template",
+  "version": "1.0.1",
+  "description": "An Electron application using Deno runtime",
+  "main": "./dist/main.js",
+  "scripts": {
+    "dev": "npm-run-all2 -p start:electron",
+    "start:electron": "bun run ./src/build.ts && electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "keywords": [
+    "electron",
+    "bun",
+    "desktop-app"
+  ],
+  "author": "18267094443@163.com",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/shared-types": "^7.10.2",
+    "@types/bun": "latest",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "@types/signale": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "electron": "^39.0.0",
+    "npm-run-all2": "^8.0.4",
+    "signale": "^1.4.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
